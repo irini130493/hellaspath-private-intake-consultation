@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10233a">
+  <meta name="description" content="HellasPath Private Intake & Consultation — online-only Greek immigration advisory intake and appointment scheduling.">
+  <title>HellasPath | Private Intake &amp; Consultation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #10233a;
+      --navy-2: #193550;
+      --ink: #17283a;
+      --muted: #647181;
+      --ivory: #f7f4ed;
+      --paper: #fffdf8;
+      --gold: #b99559;
+      --gold-dark: #886b39;
+      --line: #e5dfd3;
+      --green: #2f7258;
+      --red: #a4473d;
+      --shadow: 0 18px 50px rgba(16, 35, 58, .10);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    .online-ribbon {
+      padding: 9px 18px;
+      background: var(--navy);
+      color: #f7f2e8;
+      text-align: center;
+      font-size: .79rem;
+      letter-spacing: .045em;
+    }
+    .online-ribbon strong { color: #e5c88f; }
+    .site-header {
+      border-bottom: 1px solid rgba(185,149,89,.35);
+      background: rgba(255,253,248,.96);
+    }
+    .header-inner, .main-wrap, .footer-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .header-inner {
+      min-height: 94px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold-dark);
+      font: 1.25rem var(--serif);
+      flex: 0 0 auto;
+    }
+    .brand-name {
+      margin: 0;
+      color: var(--navy);
+      font: 600 1.15rem/1.2 var(--serif);
+      letter-spacing: .015em;
+    }
+    .brand-subtitle {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .69rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--navy);
+      font-size: .83rem;
+    }
+    .header-contact a { text-decoration: none; }
+    .header-contact a:hover { color: var(--gold-dark); }
+    .header-contact .contact-line { display: block; }
+    .online-label {
+      color: var(--gold-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 20px 60px;
+      background:
+        radial-gradient(ellipse at 82% 18%, rgba(185,149,89,.20), transparent 31%),
+        linear-gradient(135deg, #10233a, #1a3853 75%, #25435b);
+      color: #fffdf8;
+    }
+    .hero::after {
+      position: absolute;
+      right: -70px;
+      bottom: -180px;
+      width: 470px;
+      height: 470px;
+      border: 1px solid rgba(225,200,143,.2);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 32px rgba(225,200,143,.035), 0 0 0 70px rgba(225,200,143,.025);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #e4c990;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 30px; height: 1px; background: var(--gold); content: ""; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; }
+    h1 {
+      max-width: 760px;
+      margin: 17px 0;
+      font-size: clamp(2.5rem, 6vw, 4.65rem);
+      line-height: 1.06;
+      letter-spacing: -.035em;
+    }
+    .hero-copy {
+      max-width: 690px;
+      margin: 0;
+      color: rgba(255,253,248,.81);
+      font-size: 1.02rem;
+    }
+    .hero-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      margin-top: 28px;
+      color: #f0dfbb;
+      font-size: .82rem;
+    }
+    .hero-note span::before { content: "◆"; margin-right: 9px; color: var(--gold); font-size: .7rem; }
+
+    .main-wrap { padding: 48px 0 76px; }
+    .intro-row {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--gold-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .intro-row h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+      line-height: 1.18;
+    }
+    .intro-row p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .panel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+      background: #fbf8f1;
+    }
+    .panel-title {
+      margin: 0;
+      color: var(--navy);
+      font: 500 1.35rem var(--serif);
+    }
+    .reset-button {
+      border: 1px solid #d6c7aa;
+      border-radius: 7px;
+      padding: 8px 13px;
+      background: transparent;
+      color: var(--navy);
+      font-size: .78rem;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+    .reset-button:hover { background: #f1e8d8; border-color: var(--gold); }
+    .panel-content { padding: 27px 28px 30px; }
+    .step-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 650;
+      letter-spacing: .025em;
+    }
+    .progress-track {
+      height: 5px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      border-radius: 9px;
+      background: #ebe6dc;
+    }
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--gold-dark), #d9bb7e);
+      transition: width .3s ease;
+    }
+    .chat-note {
+      margin: 0 0 20px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 7px 7px 0;
+      background: #f7f2e8;
+      color: #4a5661;
+      font-size: .83rem;
+    }
+    .chat-note strong { color: var(--navy); }
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+    }
+    .track-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      min-height: 128px;
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fffefa;
+      text-align: left;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .track-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+      box-shadow: 0 10px 24px rgba(16,35,58,.08);
+    }
+    .track-number {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #e7ce9e;
+      font: .9rem var(--serif);
+      flex: 0 0 auto;
+    }
+    .track-card strong { display: block; margin: 1px 0 5px; color: var(--navy); font: 500 1.08rem/1.3 var(--serif); }
+    .track-card small { display: block; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+    .advisory {
+      margin: 0 0 19px;
+      padding: 15px 16px;
+      border: 1px solid #d9c79e;
+      border-radius: 8px;
+      background: #fbf5e7;
+      color: #51472f;
+      font-size: .84rem;
+    }
+    .advisory strong { color: #3b3426; }
+    .question-title {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font: 500 clamp(1.35rem, 3vw, 1.8rem)/1.25 var(--serif);
+    }
+    .question-subtitle { margin: 0 0 18px; color: var(--muted); font-size: .84rem; }
+    .option-list { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 18px; }
+    .option-button {
+      border: 1px solid #dcd5c9;
+      border-radius: 7px;
+      padding: 9px 13px;
+      background: #fffefa;
+      color: #384b5c;
+      font-size: .82rem;
+      text-align: left;
+      transition: .15s ease;
+    }
+    .option-button:hover { border-color: var(--gold); background: #fbf6ec; }
+    .option-button.selected { border-color: var(--navy); background: var(--navy); color: white; }
+    .answer-input, .form-control {
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 13px;
+      border: 1px solid #d8d2c8;
+      border-radius: 7px;
+      outline: none;
+      background: #fffefa;
+      color: var(--ink);
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .answer-input:focus, .form-control:focus {
+      border-color: var(--gold-dark);
+      box-shadow: 0 0 0 3px rgba(185,149,89,.14);
+    }
+    textarea.form-control { min-height: 105px; resize: vertical; }
+    .input-label, .field-label {
+      display: block;
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .field-help { margin: 6px 0 0; color: var(--muted); font-size: .74rem; }
+    .chat-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 19px; }
+    .primary-button, .secondary-button, .action-button, .download-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 45px;
+      border-radius: 7px;
+      padding: 11px 17px;
+      font-size: .83rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: .18s ease;
+    }
+    .primary-button {
+      border: 1px solid var(--navy);
+      background: var(--navy);
+      color: white;
+    }
+    .primary-button:hover:not(:disabled) { background: var(--navy-2); transform: translateY(-1px); }
+    .primary-button:disabled { cursor: not-allowed; opacity: .46; }
+    .secondary-button { border: 1px solid #d8d2c8; background: transparent; color: var(--navy); }
+    .secondary-button:hover { border-color: var(--gold); background: #fbf6ec; }
+    .appointment-heading {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font: 500 1.8rem var(--serif);
+    }
+    .appointment-intro { margin: 0 0 22px; color: var(--muted); font-size: .86rem; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .field.full { grid-column: 1 / -1; }
+    .skip-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .skip-row span { color: var(--muted); font-size: .76rem; }
+    .skip-note {
+      border: 0;
+      padding: 3px 0;
+      background: none;
+      color: var(--gold-dark);
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .form-actions { display: flex; justify-content: flex-end; margin-top: 20px; }
+    .dossier-card {
+      margin-top: 24px;
+      border: 1px solid #d7c7a6;
+      border-radius: 12px;
+      background: #fffdf8;
+      box-shadow: var(--shadow);
+    }
+    .dossier-head {
+      padding: 22px 24px;
+      border-radius: 11px 11px 0 0;
+      background: var(--navy);
+      color: white;
+    }
+    .dossier-head .eyebrow { color: #e4c990; }
+    .dossier-head h2 { margin: 8px 0 0; font-size: 1.8rem; }
+    .dossier-head p { margin: 6px 0 0; color: rgba(255,255,255,.78); font-size: .82rem; }
+    .dossier-body { padding: 22px 24px; }
+    .dossier-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 24px; }
+    .dossier-item { padding: 11px 0; border-bottom: 1px solid #eee8dd; }
+    .dossier-item dt {
+      color: var(--gold-dark);
+      font-size: .68rem;
+      font-weight: 750;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .dossier-item dd { margin: 4px 0 0; color: var(--navy); font-size: .89rem; overflow-wrap: anywhere; }
+    .dossier-notice {
+      margin: 18px 0 0;
+      padding: 12px 14px;
+      border-radius: 7px;
+      background: #f4f0e7;
+      color: #4c5964;
+      font-size: .8rem;
+    }
+    .dossier-actions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 21px; }
+    .action-button { border: 1px solid var(--navy); background: var(--navy); color: white; }
+    .action-button:hover { background: var(--navy-2); transform: translateY(-1px); }
+    .action-button.outline { border-color: #d7c7a6; background: transparent; color: var(--navy); }
+    .action-button.outline:hover { background: #f7f2e8; }
+    .dossier-text {
+      margin: 17px 0 0;
+      padding: 14px;
+      border: 1px solid #e8e1d5;
+      border-radius: 7px;
+      background: #fbf9f4;
+      color: #526170;
+      font-size: .76rem;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .site-footer {
+      padding: 25px 0;
+      background: var(--navy);
+      color: rgba(255,253,248,.78);
+    }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-copy { margin: 0; font-size: .77rem; }
+    .download-button { min-height: 38px; border: 1px solid rgba(228,201,144,.55); background: transparent; color: #f0dfbb; font-size: .76rem; }
+    .download-button:hover { background: rgba(255,255,255,.08); }
+    .hidden { display: none !important; }
+    .alert-error { margin: 14px 0 0; color: var(--red); font-size: .81rem; font-weight: 650; }
+    .small-disclaimer { margin: 20px 0 0; color: var(--muted); font-size: .75rem; }
+    :focus-visible { outline: 3px solid rgba(185,149,89,.7); outline-offset: 3px; }
+
+    @media (max-width: 760px) {
+      .header-inner { min-height: 82px; }
+      .header-contact { display: none; }
+      .hero { padding: 55px 20px 48px; }
+      .intro-row { grid-template-columns: 1fr; gap: 12px; }
+      .track-grid { grid-template-columns: 1fr; }
+      .track-card { min-height: 0; }
+      .panel-content { padding: 21px 18px 24px; }
+      .panel-top { padding: 16px 18px; }
+      .dossier-grid, .dossier-actions { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .header-inner, .main-wrap, .footer-inner { width: min(100% - 28px, 1120px); }
+      .brand-mark { width: 41px; height: 41px; }
+      .brand-name { font-size: 1rem; }
+      .brand-subtitle { font-size: .61rem; }
+      .online-ribbon { font-size: .7rem; }
+      .hero { padding: 44px 14px 40px; }
+      .hero-note { display: grid; gap: 8px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .step-row { font-size: .7rem; }
+      .option-list { display: grid; grid-template-columns: 1fr; }
+      .chat-actions .primary-button, .form-actions .primary-button { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="online-ribbon">
+    <strong>100% ONLINE CONSULTATIONS ONLY</strong> · Google Meet or WhatsApp · No in-person office visits
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="HellasPath home">
+        <span class="brand-mark" aria-hidden="true">H</span>
+        <span>
+          <span class="brand-name">HellasPath</span>
+          <span class="brand-subtitle">Private Intake &amp; Consultation</span>
+        </span>
+      </a>
+      <div class="header-contact">
+        <span>
+          <span class="online-label">Online-only advisory</span>
+          <span class="contact-line">Google Meet or WhatsApp · No office visits</span>
+        </span>
+        <a href="https://wa.me/306940743407" target="_blank" rel="noopener">+30 694 074 3407</a>
+        <a href="mailto:Irinimoney@gmail.com">Irinimoney@gmail.com</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Private client intake</span>
+      <h1>A considered path to your life in Greece.</h1>
+      <p class="hero-copy">
+        Begin with a focused assessment, then prepare an appointment request and a clear case dossier for your consultation.
+        Every consultation is <strong>100% online via Google Meet or WhatsApp</strong>; there are no in-person office visits.
+      </p>
+      <div class="hero-note">
+        <span>Private, structured intake</span>
+        <span>Four dedicated pathways</span>
+        <span>Online appointment request</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-wrap">
+    <div class="intro-row">
+      <div>
+        <p class="section-kicker">Your first step</p>
+        <h2>A tailored assessment, one question at a time.</h2>
+      </div>
+      <p>Choose the pathway that best fits your situation. Your answers help organize the discussion; they are not a legal decision or a guarantee of eligibility.</p>
+    </div>
+
+    <section class="panel" aria-labelledby="intake-title">
+      <div class="panel-top">
+        <h2 class="panel-title" id="intake-title">Online Intake Chat</h2>
+        <button class="reset-button" id="resetButton" type="button">New Assessment</button>
+      </div>
+      <div class="panel-content">
+        <div class="step-row">
+          <span id="stepLabel">Choose a pathway to begin</span>
+          <span id="stepCount">0 / 5 questions</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Assessment progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="chat-note">
+          <strong>Online-only consultations:</strong> all meetings take place by Google Meet or WhatsApp. No in-person office visits are offered.
+        </div>
+        <div id="chatArea" aria-live="polite"></div>
+        <p class="small-disclaimer">This intake is for preliminary organization only and does not replace individualized legal advice or an official decision by Greek authorities.</p>
+      </div>
+    </section>
+
+    <section class="dossier-card hidden" id="dossierCard" aria-labelledby="dossierTitle"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">HellasPath Private Intake &amp; Consultation · Online consultations only via Google Meet or WhatsApp · No in-person office visits<br>WhatsApp: +30 694 074 3407 · Email: Irinimoney@gmail.com</p>
+      <button class="download-button" id="downloadButton" type="button">Download index.html</button>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const CONTACT = {
+        whatsappDisplay: "+30 694 074 3407",
+        whatsappUrl: "https://wa.me/306940743407",
+        email: "Irinimoney@gmail.com"
+      };
+
+      const pathways = {
+        ancestry: {
+          title: "Greek Origin / Ancestry",
+          description: "Explore a Greek family connection and the records that may help establish it.",
+          questions: [
+            {
+              title: "What is your nationality and current country of residence?",
+              options: ["Non-EU national", "EU/EEA national", "Other / prefer to explain"],
+              inputLabel: "Nationality and country of residence",
+              inputPlaceholder: "For example: Canadian citizen, living in Canada"
+            },
+            {
+              title: "Which Greek ancestor are you tracing?",
+              options: ["Parent", "Grandparent", "Earlier generation", "I am not sure"],
+              inputLabel: "Ancestor, family name, or Greek locality (if known)",
+              inputPlaceholder: "Share any known names, dates, or town"
+            },
+            {
+              title: "How complete is your documented family lineage?",
+              options: ["Civil records connect each generation", "Some records are missing", "I have not gathered records yet"],
+              inputLabel: "Records already available",
+              inputPlaceholder: "For example: birth, marriage, or family registry records"
+            },
+            {
+              title: "How ready are your civil documents for official use?",
+              options: ["Apostille / authentication and translation are ready", "Some documents need preparation", "I need guidance on documents"],
+              inputLabel: "Document or translation questions",
+              inputPlaceholder: "Add details if useful"
+            },
+            {
+              title: "Where are you now, and what is your expected timeline?",
+              options: ["Outside Greece; no Greek status", "In Greece with a current permit", "In Greece; status or expiry needs review"],
+              inputLabel: "Current location, status, or deadline",
+              inputPlaceholder: "Include permit expiry or target date if relevant"
+            }
+          ]
+        },
+        family: {
+          title: "Greek / EU Citizen Family Member",
+          description: "Assess the family relationship and the sponsor's Greek or EU citizenship context.",
+          questions: [
+            {
+              title: "What is your nationality and where do you currently reside?",
+              options: ["Non-EU national outside Greece", "Non-EU national in Greece", "EU/EEA national", "Other / prefer to explain"],
+              inputLabel: "Nationality and current country",
+              inputPlaceholder: "For example: Indian citizen, currently in Greece"
+            },
+            {
+              title: "What is your relationship to the Greek or EU citizen?",
+              options: ["Spouse / registered partner", "Child or dependent child", "Parent or dependent relative", "Other family relationship"],
+              inputLabel: "Family relationship and sponsor's citizenship",
+              inputPlaceholder: "Include whether the sponsor is Greek or another EU citizen"
+            },
+            {
+              title: "Where is the family member, and what is their current status?",
+              options: ["Sponsor is in Greece", "Sponsor is in another EU country", "We are currently in different countries"],
+              inputLabel: "Sponsor's location and residence context",
+              inputPlaceholder: "Add details about the sponsor's residence or status"
+            },
+            {
+              title: "How ready are your relationship and identity documents?",
+              options: ["Official records are ready and authenticated", "Some Apostilles / translations are pending", "I need help identifying records"],
+              inputLabel: "Documents available or still needed",
+              inputPlaceholder: "For example: marriage, birth, or dependency evidence"
+            },
+            {
+              title: "What is your current location/status and timing?",
+              options: ["Outside Greece; no current permit", "In Greece with a valid permit", "In Greece; permit expiry or status is urgent"],
+              inputLabel: "Current status and deadline",
+              inputPlaceholder: "Include permit expiry or intended move date"
+            }
+          ]
+        },
+        student: {
+          title: "Student Visas & Residence Permit",
+          description: "Organize your study plans, admission, financial readiness, and current immigration status.",
+          questions: [
+            {
+              title: "What is your nationality and current country of residence?",
+              options: ["Non-EU national", "EU/EEA national", "Other / prefer to explain"],
+              inputLabel: "Nationality and current country",
+              inputPlaceholder: "For example: Egyptian citizen, living in Egypt"
+            },
+            {
+              title: "What is your university admission status in Greece?",
+              options: ["Formal admission confirmed", "Application submitted / awaiting decision", "Still researching programs"],
+              inputLabel: "University, program, and start date (if known)",
+              inputPlaceholder: "Add the institution or expected course start"
+            },
+            {
+              title: "How prepared are your financial and study documents?",
+              options: ["Funds and required records are ready", "Some financial / academic records are pending", "I need guidance on requirements"],
+              inputLabel: "Financial or document readiness",
+              inputPlaceholder: "Mention funding, tuition, Apostille, or translations"
+            },
+            {
+              title: "Where are you now, and what is your current immigration status?",
+              options: ["Outside Greece", "In Greece with a valid status", "In Greece; status needs urgent review"],
+              inputLabel: "Current location and status",
+              inputPlaceholder: "Include current visa or permit type if relevant"
+            },
+            {
+              title: "What is your intended start date or permit deadline?",
+              options: ["Within 3 months", "In 3–6 months", "More than 6 months away", "I have an upcoming permit expiry"],
+              inputLabel: "Target date or permit expiry",
+              inputPlaceholder: "Share the date or timing that matters most"
+            }
+          ]
+        },
+        longterm: {
+          title: "EU Long-Term Residence Permit",
+          description: "A status assessment for applicants already established in Greece.",
+          notice: "<strong>Important eligibility notice:</strong> this is not an entry visa. It generally requires 5 consecutive years of prior legal residence, stable taxed income, and Greek language / integration criteria. The applicable rules and evidence must be verified for your case.",
+          questions: [
+            {
+              title: "What is your nationality, and where do you currently live?",
+              options: ["Non-EU national living in Greece", "Non-EU national currently outside Greece", "Other / prefer to explain"],
+              inputLabel: "Nationality and current country",
+              inputPlaceholder: "For example: Georgian citizen, living in Greece"
+            },
+            {
+              title: "Have you completed 5 consecutive years of prior legal residence in Greece?",
+              options: ["Yes, I have completed 5 consecutive years", "No, I have not completed 5 years", "I am unsure whether my residence qualifies"],
+              inputLabel: "Briefly describe your Greek residence history",
+              inputPlaceholder: "Mention permit types, gaps, or dates if known"
+            },
+            {
+              title: "How prepared are you to evidence stable taxed income?",
+              options: ["Stable taxed income and records are available", "Income is stable, but records need review", "I do not currently meet / cannot confirm this"],
+              inputLabel: "Income and tax-record context",
+              inputPlaceholder: "For example: employment, tax returns, or other income"
+            },
+            {
+              title: "How prepared are you for Greek language and integration criteria?",
+              options: ["I have relevant language / integration evidence", "I am preparing or studying", "I need to understand the criteria"],
+              inputLabel: "Language or integration readiness",
+              inputPlaceholder: "Share certificates, study, or other relevant details"
+            },
+            {
+              title: "What is your current residence status and permit timeline?",
+              options: ["Current Greek permit is valid", "Permit renewal or expiry is approaching", "I am outside Greece or my status needs review"],
+              inputLabel: "Current permit type and expiry date",
+              inputPlaceholder: "Include your expiry date or status concern"
+            }
+          ]
+        }
+      };
+
+      const chatArea = document.getElementById("chatArea");
+      const progressFill = document.getElementById("progressFill");
+      const progressTrack = document.querySelector(".progress-track");
+      const stepLabel = document.getElementById("stepLabel");
+      const stepCount = document.getElementById("stepCount");
+      const dossierCard = document.getElementById("dossierCard");
+
+      let state = freshState();
+
+      function freshState() {
+        return {
+          pathway: null,
+          questionIndex: 0,
+          answers: [],
+          selectedOption: "",
+          currentAnswer: "",
+          appointment: null
+        };
+      }
+
+      function setProgress(value, label) {
+        const bounded = Math.max(0, Math.min(5, value));
+        progressFill.style.width = `${bounded * 20}%`;
+        progressTrack.setAttribute("aria-valuenow", String(bounded));
+        stepLabel.textContent = label;
+        stepCount.textContent = `${bounded} / 5 questions`;
+      }
+
+      function renderPathways() {
+        setProgress(0, "Choose a pathway to begin");
+        const choices = [
+          ["ancestry", "Greek Origin / Ancestry", "Explore Greek family lineage and supporting civil records."],
+          ["family", "Greek / EU Citizen Family Member", "Organize the family relationship and sponsor context."],
+          ["student", "Student Visas & Residence Permit", "Review admission, study documents, and permit timing."],
+          ["longterm", "EU Long-Term Residence Permit", "For applicants assessing long-term residence eligibility."]
+        ];
+
+        chatArea.innerHTML = `
+          <div class="track-grid" role="group" aria-label="Choose one of four consultation pathways">
+            ${choices.map((item, index) => `
+              <button class="track-card" type="button" data-pathway="${item[0]}">
+                <span class="track-number">${index + 1}</span>
+                <span><strong>${item[1]}</strong><small>${item[2]}</small></span>
+              </button>
+            `).join("")}
+          </div>
+        `;
+
+        chatArea.querySelectorAll("[data-pathway]").forEach(button => {
+          button.addEventListener("click", () => {
+            state.pathway = button.dataset.pathway;
+            state.questionIndex = 0;
+            state.answers = [];
+            state.selectedOption = "";
+            state.currentAnswer = "";
+            renderQuestion();
+          });
+        });
+      }
+
+      function renderQuestion() {
+        const track = pathways[state.pathway];
+        if (!track) return renderPathways();
+
+        const question = track.questions[state.questionIndex];
+        setProgress(state.questionIndex, `${track.title} · Question ${state.questionIndex + 1} of 5`);
+
+        const notice = state.pathway === "longterm" ? `<div class="advisory">${track.notice}</div>` : "";
+        chatArea.innerHTML = `
+          ${notice}
+          <h3 class="question-title">${question.title}</h3>
+          <p class="question-subtitle">Select the closest answer, or add a short note below.</p>
+          <div class="option-list" role="group" aria-label="Quick answer options">
+            ${question.options.map(option => `<button type="button" class="option-button">${option}</button>`).join("")}
+          </div>
+          <label class="input-label" for="answerInput">${question.inputLabel}</label>
+          <input class="answer-input" id="answerInput" type="text" autocomplete="off" placeholder="${question.inputPlaceholder}">
+          <div class="chat-actions">
+            <button type="button" class="primary-button" id="continueButton" disabled>${state.questionIndex === 4 ? "Continue to appointment details" : "Continue"} <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="alert-error hidden" id="questionError" role="alert"></p>
+        `;
+
+        const optionButtons = Array.from(chatArea.querySelectorAll(".option-button"));
+        const answerInput = document.getElementById("answerInput");
+        const continueButton = document.getElementById("continueButton");
+        const questionError = document.getElementById("questionError");
+
+        function updateContinue() {
+          continueButton.disabled = !state.selectedOption && !answerInput.value.trim();
+        }
+
+        optionButtons.forEach(button => {
+          button.addEventListener("click", () => {
+            optionButtons.forEach(item => item.classList.remove("selected"));
+            button.classList.add("selected");
+            state.selectedOption = button.textContent;
+            questionError.classList.add("hidden");
+            updateContinue();
+          });
+        });
+
+        answerInput.addEventListener("input", () => {
+          state.currentAnswer = answerInput.value;
+          questionError.classList.add("hidden");
+          updateContinue();
+        });
+
+        continueButton.addEventListener("click", () => {
+          const response = answerInput.value.trim() || state.selectedOption;
+          if (!response) return;
+          state.answers[state.questionIndex] = {
+            question: question.title,
+            response,
+            additional: answerInput.value.trim() && state.selectedOption
+              ? `Selected: ${state.selectedOption}`
+              : ""
+          };
+
+          if (state.pathway === "longterm" && state.questionIndex === 1 &&
+              (state.selectedOption === "No, I have not completed 5 years" ||
+               state.selectedOption === "I am unsure whether my residence qualifies")) {
+            showLongTermGate();
+            return;
+          }
+
+          state.questionIndex += 1;
+          state.selectedOption = "";
+          state.currentAnswer = "";
+          if (state.questionIndex >= 5) {
+            showAppointmentForm();
+          } else {
+            renderQuestion();
+          }
+        });
+      }
+
+      function showLongTermGate() {
+        setProgress(2, "Eligibility check");
+        chatArea.innerHTML = `
+          <div class="advisory">
+            <strong>This pathway may not be suitable yet.</strong> The EU Long-Term Residence Permit generally requires 5 consecutive years of prior legal residence in Greece. It is not an entry visa. If you have not completed that period, or are unsure whether your residence qualifies, please choose another pathway or verify your residence history before proceeding.
+          </div>
+          <h3 class="question-title">Would another pathway better fit your current situation?</h3>
+          <p class="question-subtitle">Choose one of the other available pathways to start a new assessment.</p>
+          <div class="track-grid">
+            <button class="track-card" type="button" data-pathway="ancestry"><span class="track-number">1</span><span><strong>Greek Origin / Ancestry</strong><small>Explore Greek family lineage and supporting civil records.</small></span></button>
+            <button class="track-card" type="button" data-pathway="family"><span class="track-number">2</span><span><strong>Greek / EU Citizen Family Member</strong><small>Organize the family relationship and sponsor context.</small></span></button>
+            <button class="track-card" type="button" data-pathway="student"><span class="track-number">3</span><span><strong>Student Visas &amp; Residence Permit</strong><small>Review admission, study documents, and permit timing.</small></span></button>
+          </div>
+          <div class="chat-actions"><button class="secondary-button" type="button" id="returnPathways">Return to all four pathways</button></div>
+        `;
+        chatArea.querySelectorAll("[data-pathway]").forEach(button => button.addEventListener("click", () => {
+          state = freshState();
+          state.pathway = button.dataset.pathway;
+          renderQuestion();
+        }));
+        document.getElementById("returnPathways").addEventListener("click", () => {
+          state = freshState();
+          renderPathways();
+        });
+      }
+
+      function tomorrowLocalDate() {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const year = tomorrow.getFullYear();
+        const month = String(tomorrow.getMonth() + 1).padStart(2, "0");
+        const day = String(tomorrow.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+      }
+
+      function showAppointmentForm() {
+        setProgress(5, "Assessment complete · Appointment details");
+        const tomorrow = tomorrowLocalDate();
+
+        chatArea.innerHTML = `
+          <h3 class="appointment-heading">Arrange your online consultation</h3>
+          <p class="appointment-intro">Complete your contact details and preferred time window. All consultations are <strong>100% online via Google Meet or WhatsApp</strong>; no in-person office visits are available. Times shown are Greece time (Europe/Athens).</p>
+          <form id="appointmentForm">
+            <div class="form-grid">
+              <div class="field">
+                <label class="field-label" for="fullName">Full Name *</label>
+                <input class="form-control" id="fullName" name="fullName" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label class="field-label" for="phone">WhatsApp Number (with country code) *</label>
+                <input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567" required>
+              </div>
+              <div class="field">
+                <label class="field-label" for="email">Email Address *</label>
+                <input class="form-control" id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label class="field-label" for="channel">Preferred 100% Online Channel *</label>
+                <select class="form-control" id="channel" name="channel" required>
+                  <option value="" selected disabled>Select an online channel</option>
+                  <option>Google Meet Video Call (Email Calendar Invite)</option>
+                  <option>WhatsApp Video / Voice Call (+30 694 074 3407)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="field-label" for="preferredDate">Preferred Date *</label>
+                <input class="form-control" id="preferredDate" name="preferredDate" type="date" min="${tomorrow}" value="${tomorrow}" required>
+                <p class="field-help">Date picker starts tomorrow. Appointment times use Greece time (Europe/Athens).</p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="timeWindow">Preferred Time Window *</label>
+                <select class="form-control" id="timeWindow" name="timeWindow" required>
+                  <option value="" selected disabled>Select a Greece-time window</option>
+                  <option value="Morning (10:00 – 13:00 Greece Time)">Morning (10:00 – 13:00 Greece Time)</option>
+                  <option value="Afternoon (13:00 – 17:00 Greece Time)">Afternoon (13:00 – 17:00 Greece Time)</option>
+                  <option value="Evening (17:00 – 20:00 Greece Time)">Evening (17:00 – 20:00 Greece Time)</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label class="field-label" for="caseNote">Optional Case Note</label>
+                <textarea class="form-control" id="caseNote" name="caseNote" placeholder="Share any context you would like included in your case dossier."></textarea>
+                <div class="skip-row"><span>This note is optional and can be left blank.</span><button class="skip-note" id="skipNote" type="button">Skip case note</button></div>
+              </div>
+            </div>
+            <div class="form-actions"><button class="primary-button" type="submit">Prepare Client Case Dossier <span aria-hidden="true">→</span></button></div>
+            <p class="alert-error hidden" id="formError" role="alert"></p>
+          </form>
+        `;
+
+        document.getElementById("skipNote").addEventListener("click", () => {
+          document.getElementById("caseNote").value = "";
+          document.getElementById("caseNote").focus();
+        });
+
+        document.getElementById("appointmentForm").addEventListener("submit", event => {
+          event.preventDefault();
+          const form = event.currentTarget;
+          if (!form.reportValidity()) return;
+
+          const selectedDate = document.getElementById("preferredDate").value;
+          if (!selectedDate || selectedDate < tomorrowLocalDate()) {
+            const error = document.getElementById("formError");
+            error.textContent = "Please choose tomorrow or a later date.";
+            error.classList.remove("hidden");
+            return;
+          }
+
+          state.appointment = {
+            fullName: document.getElementById("fullName").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            channel: document.getElementById("channel").value,
+            date: selectedDate,
+            timeWindow: document.getElementById("timeWindow").value,
+            note: document.getElementById("caseNote").value.trim()
+          };
+          renderDossier();
+        });
+      }
+
+      function readableDate(dateString) {
+        const [year, month, day] = dateString.split("-").map(Number);
+        return new Intl.DateTimeFormat("en", {
+          weekday: "long", year: "numeric", month: "long", day: "numeric",
+          timeZone: "UTC"
+        }).format(new Date(Date.UTC(year, month - 1, day)));
+      }
+
+      function calendarTimes(dateString, timeWindow) {
+        const startTimes = {
+          "Morning (10:00 – 13:00 Greece Time)": ["100000", "130000"],
+          "Afternoon (13:00 – 17:00 Greece Time)": ["130000", "170000"],
+          "Evening (17:00 – 20:00 Greece Time)": ["170000", "200000"]
+        };
+        const datePart = dateString.replaceAll("-", "");
+        const times = startTimes[timeWindow] || startTimes["Morning (10:00 – 13:00 Greece Time)"];
+        return `${datePart}T${times[0]}/${datePart}T${times[1]}`;
+      }
+
+      function dossierText() {
+        const appointment = state.appointment;
+        const track = pathways[state.pathway];
+        const answerLines = state.answers.map((item, index) =>
+          `${index + 1}. ${item.question}\n   ${item.response}${item.additional ? ` (${item.additional})` : ""}`
+        ).join("\n");
+
+        return [
+          "HELLASPATH PRIVATE INTAKE & CONSULTATION",
+          "CLIENT CASE DOSSIER",
+          "",
+          "CONSULTATION FORMAT: 100% ONLINE ONLY via Google Meet or WhatsApp. No in-person office visits.",
+          "",
+          `Pathway: ${track.title}`,
+          "",
+          "INTAKE ASSESSMENT",
+          answerLines,
+          "",
+          "CLIENT CONTACT",
+          `Full Name: ${appointment.fullName}`,
+          `WhatsApp Number: ${appointment.phone}`,
+          `Email Address: ${appointment.email}`,
+          "",
+          "PREFERRED ONLINE APPOINTMENT",
+          `Channel: ${appointment.channel}`,
+          `Preferred Date: ${readableDate(appointment.date)}`,
+          `Preferred Time Window: ${appointment.timeWindow} (Greece time / Europe/Athens)`,
+          appointment.note ? `Case Note: ${appointment.note}` : "Case Note: Skipped",
+          "",
+          "Consultation contact: WhatsApp +30 694 074 3407 | Irinimoney@gmail.com",
+          "",
+          "This dossier records the client's preliminary intake answers and appointment preferences. It is not a legal decision or guarantee of eligibility."
+        ].join("\n");
+      }
+
+      function renderDossier() {
+        const appointment = state.appointment;
+        const track = pathways[state.pathway];
+        const text = dossierText();
+        const dateLabel = readableDate(appointment.date);
+        const details = [
+          ["Full Name", appointment.fullName],
+          ["Pathway", track.title],
+          ["WhatsApp Number", appointment.phone],
+          ["Email Address", appointment.email],
+          ["Online Consultation Channel", appointment.channel],
+          ["Preferred Date", dateLabel],
+          ["Preferred Time Window", `${appointment.timeWindow} · Greece time (Europe/Athens)`],
+          ["Case Note", appointment.note || "Skipped"]
+        ];
+
+        dossierCard.classList.remove("hidden");
+        dossierCard.innerHTML = `
+          <div class="dossier-head">
+            <span class="eyebrow">Prepared for your online consultation</span>
+            <h2 id="dossierTitle">Client Case Dossier</h2>
+            <p>HellasPath Private Intake &amp; Consultation · All consultations are 100% online via Google Meet or WhatsApp. No in-person office visits.</p>
+          </div>
+          <div class="dossier-body">
+            <dl class="dossier-grid" id="dossierDetails"></dl>
+            <p class="dossier-notice"><strong>Online-only:</strong> your consultation will be conducted by Google Meet or WhatsApp. For direct contact, WhatsApp ${CONTACT.whatsappDisplay} or email ${CONTACT.email}.</p>
+            <div class="dossier-actions">
+              <a class="action-button" id="whatsappAction" href="#" target="_blank" rel="noopener">1. Confirm Appointment on WhatsApp (${CONTACT.whatsappDisplay})</a>
+              <a class="action-button outline" id="emailAction" href="#">2. Send Appointment &amp; Dossier via Email (${CONTACT.email})</a>
+              <a class="action-button outline" id="calendarAction" href="#" target="_blank" rel="noopener">3. Add &amp; Invite on Google Calendar</a>
+              <button class="action-button outline" id="copyAction" type="button">Copy Case Dossier Text</button>
+            </div>
+            <pre class="dossier-text" id="dossierText"></pre>
+          </div>
+        `;
+
+        const detailsElement = document.getElementById("dossierDetails");
+        details.forEach(([label, value]) => {
+          const item = document.createElement("div");
+          item.className = "dossier-item";
+          const dt = document.createElement("dt");
+          dt.textContent = label;
+          const dd = document.createElement("dd");
+          dd.textContent = value;
+          item.append(dt, dd);
+          detailsElement.appendChild(item);
+        });
+
+        document.getElementById("dossierText").textContent = text;
+
+        const subject = `HellasPath Online Consultation Request — ${appointment.fullName}`;
+        const encodedMessage = encodeURIComponent(text);
+        document.getElementById("whatsappAction").href = `${CONTACT.whatsappUrl}?text=${encodedMessage}`;
+        document.getElementById("emailAction").href =
+          `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodedMessage}`;
+
+        const calendarParams = new URLSearchParams({
+          action: "TEMPLATE",
+          text: `HellasPath Online Consultation — ${appointment.fullName}`,
+          dates: calendarTimes(appointment.date, appointment.timeWindow),
+          ctz: "Europe/Athens",
+          details: text,
+          location: appointment.channel
+        });
+        document.getElementById("calendarAction").href =
+          `https://calendar.google.com/calendar/render?${calendarParams.toString()}&add=${encodeURIComponent(CONTACT.email)}`;
+
+        document.getElementById("copyAction").addEventListener("click", async event => {
+          const button = event.currentTarget;
+          try {
+            await navigator.clipboard.writeText(text);
+            button.textContent = "Dossier copied";
+          } catch (error) {
+            const helper = document.createElement("textarea");
+            helper.value = text;
+            helper.setAttribute("readonly", "");
+            helper.style.position = "fixed";
+            helper.style.opacity = "0";
+            document.body.appendChild(helper);
+            helper.select();
+            document.execCommand("copy");
+            helper.remove();
+            button.textContent = "Dossier copied";
+          }
+          window.setTimeout(() => { button.textContent = "Copy Case Dossier Text"; }, 2200);
+        });
+
+        dossierCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      document.getElementById("resetButton").addEventListener("click", () => {
+        state = freshState();
+        dossierCard.classList.add("hidden");
+        dossierCard.innerHTML = "";
+        renderPathways();
+        document.getElementById("intake-title").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
+      document.getElementById("downloadButton").addEventListener("click", () => {
+        const pageSource = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+        const blob = new Blob([pageSource], { type: "text/html;charset=utf-8" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "index.html";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(link.href);
+      });
+
+      renderPathways();
+    })();
+  </script>
+</body>
+</html>
